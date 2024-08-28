@@ -1,0 +1,77 @@
+.crypto-page-container {
+  display: grid;
+  grid-template-rows: 150px 1fr;
+  grid-template-columns: 480px 1fr;
+  gap: 2rem;
+  position: relative;
+}
+
+.crypto-page-container .info {
+  grid-row: 1 / 2;
+  grid-column: 1 / 2;
+  padding: 1.5rem;
+  position: fixed;
+  margin-bottom: 2rem;
+}
+
+.crypto-page-container .symbol {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.crypto-page-container .details {
+  grid-row: 2 / 3;
+  grid-column: 1 / 2;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  padding: 1.5rem;
+  padding-left: 2.5rem;
+  position: fixed;
+}
+
+.crypto-page-container .detail {
+  margin-bottom: 1rem;
+}
+
+.crypto-page-container .history {
+  grid-row: 1 / 3;
+  grid-column: 2 / 3;
+}
+
+.crypto-page-container .label {
+  color: skyblue;
+}
+
+.crypto-page-container .price {
+  color: #4fff60;
+}
+
+.crypto-page-container h1 {
+  font-weight: 600;
+  font-size: 3rem;
+  margin-bottom: 0.2rem;
+}
+
+table {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+td,
+th {
+  padding: 1rem;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+thead tr {
+  border-bottom: 1px solid rgba(128, 128, 128, 0.34);
+}
+
+tbody tr:nth-child(odd) {
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 8px;
+}

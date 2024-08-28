@@ -1,0 +1,16 @@
+Es la forma en la que vamos a controlar el DOM
+
+- getElementByID
+- getElementByClass
+- getElementByTag
+
+Una vez que obtienes un elemento mediante el DOM
+puedes agregarle atributos, propiedades, clases,
+estilos, cambiarle su ID.
+
+React no usa el DOM verdadero, utiliza un puente
+llamado VirtualDOM y le quita este trabajo al 
+navegador siendo asi mas eficiente.
+
+useRef nos permite crear una referencia hacia un
+elemento del DOM

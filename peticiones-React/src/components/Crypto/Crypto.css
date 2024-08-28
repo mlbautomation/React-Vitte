@@ -1,0 +1,39 @@
+.crypto {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  padding: 1rem;
+  transition: all 0.25s;
+}
+
+.crypto:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 0px 12px 12px rgba(0, 0, 0, 0.35);
+}
+
+.crypto .info {
+  color: #d2d2d5;
+}
+
+.crypto h2,
+.crypto a {
+  color: white;
+  text-decoration: none;
+}
+
+.info {
+  color: rgb(191, 191, 191);
+}
+
+.label {
+  color: skyblue;
+}
+
+.positive {
+  color: greenyellow;
+}
+
+.negative {
+  color: red;
+}

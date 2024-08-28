@@ -1,0 +1,45 @@
+En el caso de los componentes funciones
+nosotros no tenemos la extensión de métodos:
+
+- class Calculadora1 extends Component
+
+por ende, no podemos acceder al método:
+
+- render()
+- componentDidMount()
+- componentWillUnmount()
+- constructor() 
+
+Mucho menos constructor() porque no estamos 
+hablando de progración orientada a objetos.
+
+Entonces, no se podía manejar:
+El estado, o cuando se iba a actualizar o desmontar
+Ahora react ha incorporado una forma de engancharnos
+(por eso el nombre de hook) a ese ciclo de vida.
+
+Hay 2 hook muy importantes para manejar el : 
+- estado (useState)
+- ciclo de vida (useEffect).
+
+useEffect recibe 2 argumentos
+1. una función
+2. un array (opcional)
+
+useEffect es ejecutado:
+- cuando el componente es construido
+- cuando el estado es actualizado
+
+El array opcional será el listado de todos
+los estados que quiero controlar como disparadores
+de la función que escribí en el useEffect.
+
+Si coloco el array vacío [] el useEffect
+solo se ejecuta una vez y nunca mas.
+
+Si no coloco nada el useEffect siempre se ejecuta
+ante cualquier cambio de estado.
+
+El useEffect es una función que puede retornar algo,
+y este algo es todo lo que quieras ejecutar cuando
+el componente se desmonta.
