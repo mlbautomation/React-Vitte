@@ -27,7 +27,7 @@ function Grid() {
       });
   }, []);
 
-  if (!cryptos) return <span>Cargando...</span>;
+  if (!cryptos) return <span>Loading...</span>;
 
   return (
     <div className="app-container">
