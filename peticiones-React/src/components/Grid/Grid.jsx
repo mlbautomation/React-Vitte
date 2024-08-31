@@ -3,7 +3,7 @@ y usar el comando: yarn add axios */
 
 import { useEffect, useState } from "react";
 import axios from "axios";
-import Crypto from "../Crypto/Crypto";
+import Crypto from "../crypto/Crypto";
 import "./Grid.css";
 
 /* https://docs.coincap.io/ */
