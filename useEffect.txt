@@ -1,0 +1,35 @@
+import { useEffect } from 'react';
+
+// Use this hook to sync with other external services:
+// endpoint
+// component
+// service
+
+useEffect(() => {
+  console.log('hallo!')
+  return () => {
+      console.log('tchüss!')
+  }
+}, []);
+
+// Example
+
+const fetcher = async () => {
+    const res = await fetch('')
+    return res.json()
+}
+
+const fetchInformation = async () => {
+    const result = await fetcher();
+    console.log(result)
+}
+
+useEffect(() => {
+  fetchInformation()
+}, []);
+
+return (
+    <>
+    <button onClick={fetchInformation}> Click </button>
+    </>
+)

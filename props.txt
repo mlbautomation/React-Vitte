@@ -1,0 +1,58 @@
+import "./App.css";
+import TextArea from "./components/textArea/textArea";
+function App() {
+  return (
+    <>
+      <TextArea text="I've done it" />
+    </>
+  );
+}
+
+export default App;
+
+---------------------------------------------------------------
+
+import { useRef } from "react";
+
+const TextArea = ({ text }) => {
+  const textareaRef = useRef();
+  const handleButtonClick = (e) => {
+    e.preventDefault();
+    if (!textareaRef.current) {
+      console.log("there is no reference for this element");
+      return;
+    }
+    textareaRef.current.value = text;
+  };
+
+  return (
+    <>
+      <textarea
+        className="messagearea"
+        id="chatmessages"
+        readOnly
+        name="chatmessages"
+        rows="4"
+        cols="50"
+        placeholder="Write something here!"
+        ref={textareaRef}
+      ></textarea>
+
+      <form id="messageform">
+        <br />
+        <label htmlFor="writemessage">Message: </label>
+        <input type="text" id="writemessage" name="writemessage" />
+        <br />
+        <input
+          type="submit"
+          value="Write message"
+          onClick={handleButtonClick}
+        />
+      </form>
+      <br />
+      <br />
+    </>
+  );
+};
+
+export default TextArea;

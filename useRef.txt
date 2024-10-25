@@ -1,0 +1,31 @@
+// useRef allow us to create a mutable reference
+// which persist all the life cycle of the component
+// without cuases a render  (internal variable)
+
+// useRef do a reference to a DOM element
+
+import { useRef } from "react";
+
+const FocusInput = () => {
+  const InputRef = useRef < HTMLInputElement > null;
+
+  const handleButtonClick = () => {
+    if (!InputRef.current) {
+      console.log("No existe la referencia al elemento");
+      return;
+    }
+    InputRef.current.focus();
+  };
+  return (
+    <div>
+      <input
+        ref={InputRefnputRef}
+        type="text"
+        placeholder="Write something here..."
+      />
+      <button onClick={handleButtonClick}>Enfocar en el input</button>
+    </div>
+  );
+};
+
+export default FocusInput;

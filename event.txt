@@ -1,0 +1,9 @@
+
+e.target: which element is producing the event?
+object HTML button element
+
+e.currentTarget: which element is assosiated with the event,
+independently where the event is producing it.
+object HTMLDivElement
+
+e.preventDefault: Disable links and in our case disable render.
